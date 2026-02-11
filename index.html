@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Valentine Letter</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400..700&display=swap" rel="stylesheet" />
+  </head>
+  <body>
+    <div id="envelope-container">
+      <img src="envelope.png" alt="Envelope" id="envelope" />
+      <p class="intro-text">♡ Letter for You ♡</p>
+    </div>
+
+    <div id="letter-container">
+      <div class="letter-window" id="letter-window">
+        
+        <div id="main-content">
+          <h1 id="letter-title">Will you be my Valentine?</h1>
+          <img src="cute-cat-cartoon.gif" class="cat" id="letter-cat" />
+          <div class="buttons" id="letter-buttons">
+            <img src="Yes.png" class="btn yes-btn" alt="Yes" id="yes-btn" />
+            <img src="No.png" class="btn no-btn" id="no-btn" alt="No" />
+          </div>
+        </div>
+
+        <div id="guilt-content" style="display: none;">
+          <h1 class="guilt-header">Really? Even if:</h1>
+          <img src="cry.gif" class="cat" />
+          <ul class="guilt-list">
+            <li class="pink-border-text">I am the love of your life</li>
+            <li class="pink-border-text">I am the most handsomest man ever</li>
+            <li class="pink-border-text">I take care of you</li>
+            <li class="pink-border-text">I will be there for you no matter what</li>
+            <li class="pink-border-text">My birthday is coming up</li>
+            <li class="pink-border-text">And I love you SO SO SO MUCH and I will never take you for granted and love you forever and ever?</li>
+          </ul>
+          <button id="sorry-btn">I'm Sorry</button>
+        </div>
+
+        <div id="thought-content" style="display: none;">
+          <h1 class="large">THATS WHAT I THOUGHT</h1>
+          <p>Now lets try that again...</p>
+        </div>
+
+        <div id="final-success" style="display: none;">
+           <h1>Yippeeee!</h1>
+           <img src="dance-moves-cat.gif" class="cat" />
+           <p id="final-text" class="final-text">
+            <strong>Valentine Date:</strong> Ciao Bello When You Are Back *\(^o^)/*
+          </p>
+        </div>
+
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>

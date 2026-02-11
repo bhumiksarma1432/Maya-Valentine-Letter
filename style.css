@@ -1,0 +1,166 @@
+body {
+    margin: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url("heart-bg.jpg");
+    background-size: cover;
+    background-position: center;
+    font-family: "Pixelify Sans", sans-serif;
+    overflow: hidden;
+    color: black; /* Default text color set back to black */
+}
+
+/* Original Intro Font Style */
+.intro-text {
+    font-size: 30px;
+    color: black;
+    margin-top: 15px;
+}
+
+/* Envelope */
+#envelope-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    cursor: pointer;
+}
+
+#envelope { width: 200px; animation: pulse 1.5s infinite; }
+
+@keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.1); }
+    100% { transform: scale(1); }
+}
+
+/* Letter Window */
+#letter-container {
+    display: none;
+    position: fixed;
+    inset: 0;
+    justify-content: center;
+    align-items: center;
+    z-index: 20;
+}
+
+.letter-window {
+    position: relative;
+    width: 90vw;
+    max-width: 550px;
+    height: 600px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-image: url("paper.png");
+    background-size: 100% 100%; /* Fixes the black edges by stretching to fit exactly */
+    background-repeat: no-repeat;
+    border-radius: 20px;
+    padding: 30px;
+    text-align: center;
+    opacity: 0;
+    transform: scale(0.8);
+    transition: all 0.5s ease;
+}
+
+
+.letter-window.open { opacity: 1; transform: scale(1); }
+
+#main-content, #guilt-content, #thought-content, #final-success {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.cat { width: 180px; margin: 10px auto; }
+
+h1 { font-size: 32px; margin: 0; }
+
+.large { font-size: 48px; }
+
+/* Buttons */
+.buttons {
+    width: 100%;
+    height: 150px;
+    display: flex; 
+    justify-content: center; /* This centers them horizontally */
+    align-items: center;     /* This centers them vertically */
+    gap: 40px; 
+    position: relative;      /* Keeps the "No" button constrained to this area */
+}
+
+.btn { 
+    width: 140px; 
+    cursor: pointer; 
+    touch-action: manipulation;
+    z-index: 10;
+}
+
+
+.yes-btn { position: relative; }
+
+.no-btn { 
+    position: relative; 
+    transition: all 0.2s ease-out; 
+}
+
+/* Guilt Trip Specific Styling */
+.guilt-list {
+    text-align: left;
+    list-style: none;
+    padding: 0;
+    margin: 10px 0;
+}
+
+/* Black text for the guilt list */
+.pink-border-text {
+    font-size: 20px; 
+    color: black; 
+    -webkit-text-stroke: 0px; 
+    font-weight: normal;
+    margin-bottom: 8px;
+    line-height: 1;
+}
+
+#thought-content p {
+    font-size: 32px;
+    margin-top: 15px;
+}
+
+#sorry-btn {
+    font-family: "Pixelify Sans", sans-serif;
+    background: #ff4d6d;
+    color: white;
+    border: 2px solid white;
+    padding: 10px 20px;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 20px;
+}
+
+/* Final Page Styles */
+.final-text {
+    font-size: 24px;
+    background: rgba(255, 255, 255, 0.6);
+    padding: 10px;
+    border-radius: 8px;
+    margin-top: 10px;
+}
+
+/* Reset mode (Double Yes screen) */
+.reset-mode .buttons {
+    position: static;
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    height: auto;
+    margin-top: 20px;
+}
+
+.reset-mode .btn { 
+    position: static; 
+    width: 140px; 
+}
